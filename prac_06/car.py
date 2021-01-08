@@ -9,6 +9,7 @@ class Car:
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.name = name
         self.fuel = fuel
         self.odometer = 0
 
@@ -22,6 +23,8 @@ class Car:
         Drive given distance if car has enough fuel
         or drive until fuel runs out return the distance actually driven.
         """
+
+
         if distance > self.fuel:
             distance = self.fuel
             self.fuel = 0
@@ -29,3 +32,10 @@ class Car:
             self.fuel -= distance
         self.odometer += distance
         return distance
+
+    def get_name(self):
+        return self.name
+
+    def __str__(self):
+        text_str = "{} {}, {}".format(self.name, self.fuel, self.odometer)
+        return text_str
