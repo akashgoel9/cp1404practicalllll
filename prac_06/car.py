@@ -23,6 +23,8 @@ class Car:
         Drive given distance if car has enough fuel
         or drive until fuel runs out return the distance actually driven.
         """
+
+
         if distance > self.fuel:
             distance = self.fuel
             self.fuel = 0
@@ -37,4 +39,3 @@ class Car:
     def __str__(self):
         text_str = "{} {}, {}".format(self.name, self.fuel, self.odometer)
         return text_str
-
